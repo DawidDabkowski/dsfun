@@ -1,0 +1,7 @@
+import pytest
+import dsfun.f1_loss_tf
+
+#class TestF1LossTf:
+
+#def test_trivial_case(self):
+#    assert 1.0 == pytest.approx(f1_loss_tf())
