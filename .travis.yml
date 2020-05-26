@@ -2,8 +2,8 @@ language: python
 python:
   - "3.8"
 install:
-#  - pip install -e .
-  - pip install -r requirements.txt
+  - pip install -e .
+#  - pip install -r requirements.txt
   - pip install pytest-cov codecov
 script:
   - pytest --cov=dsfun tests

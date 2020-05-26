@@ -18,5 +18,10 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+
+    install_requires=[
+        'pytest==5.4.2'
+    ],
+    
     python_requires='>=3.8',
 )
