@@ -1,5 +1,5 @@
 import pytest
-import dsfun.f1_loss_tf
+from dsfun.f1_loss_tf import f1_loss_tf
 
 #class TestF1LossTf:
 
