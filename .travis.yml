@@ -2,9 +2,10 @@ language: python
 python:
   - "3.8"
 install:
+#  - pip install -e .
   - pip install -r requirements.txt
+  - pip install pytest-cov codecov
 script:
-  - pytest
-#  - coverage run -m unittest discover
-#after_success:
-#bash <(curl -s https://codecov.io/bash)
+  - pytest --cov=dsfun tests
+after_success:
+  - codecov
