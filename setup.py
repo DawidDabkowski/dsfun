@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="dsfun",
-    version="0.0.2",
+    version="0.0.3",
     author="Dawid Dabkowski",
     author_email="dav.dabkowski@gmail.com",
     description="Helpful functions for Data Science",
@@ -20,8 +20,8 @@ setuptools.setup(
     ],
 
     install_requires=[
-        'pytest==5.4.2',
-        'twine==3.1.1'
+        'pytest>=5.4.2',
+        'tensorflow>=2.2.0'
     ],
     
     python_requires='>=3.8',
