@@ -20,9 +20,17 @@ setuptools.setup(
     ],
 
     install_requires=[
-        'pytest>=5.4.2',
         'tensorflow>=2.2.0'
     ],
+    
+    extras_require={
+        'developing': [
+            'pytest>=5.4.2',,
+            'twine>=3.1.1',
+            'jupyterlab>=2.1.3',
+            'ipdb>=0.13.2'
+        ],
+    },
     
     python_requires='>=3.8',
 )

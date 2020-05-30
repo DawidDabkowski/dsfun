@@ -1,4 +1,5 @@
 import tensorflow as tf
+import ipdb
 
 def f1_loss(y_true, y_pred, mode='macro'):
     """Computes differentiable f1 loss fun nction.
@@ -17,9 +18,10 @@ def f1_loss(y_true, y_pred, mode='macro'):
     fn = tf.reduce_sum(y_true * (1 - y_pred), axis=sum_axis)
 
     f1 = 2*tp / (2*tp + fn + fp + 1e-16)
-    return 1 - tf.reduce_mean(f1, axis=sum_axis)
+#     ipdb.set_trace()
+    return 1.0 - tf.reduce_mean(f1, axis=sum_axis).numpy()
 
 
 def f1_score(y_true, y_pred, mode='marcro'):
     y_pred = tf.math.round(y_pred)
-    return 1 - f1_loss(y_true, y_pred, mode)
+    return 1.0 - f1_loss(y_true, y_pred, mode)
