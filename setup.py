@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="dsfun",
-    version="0.0.3",
+    version="0.0.4",
     author="Dawid Dabkowski",
     author_email="dav.dabkowski@gmail.com",
     description="Helpful functions for Data Science",
@@ -25,7 +25,7 @@ setuptools.setup(
     
     extras_require={
         'developing': [
-            'pytest>=5.4.2',,
+            'pytest>=5.4.2',
             'twine>=3.1.1',
             'jupyterlab>=2.1.3',
             'ipdb>=0.13.2'
