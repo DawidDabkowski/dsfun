@@ -6,7 +6,6 @@ install:
 #  - pip install -r requirements.txt
   - pip install pytest-cov codecov
 script:
-#  - pytest tests
   - pytest --cov=dsfun tests
 after_success:
   - codecov
