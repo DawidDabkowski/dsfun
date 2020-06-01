@@ -24,10 +24,17 @@ Limitations:
 *TO DO*
 
 `import tensorflow as tf`
+
 `from dsfun import f1_loss, f1_score`
+
 `y_true = tf.constant([[1.0, 0.0], [1.0, 1.0], [0.0, 1.0], [0.0, 1.0]])`
+
 `y_pred = tf.constant([[0.5, 0.5], [0.5, 0.5], [1.0, 0.0], [0.0, 1.0]])`
+
 `f1_loss(y_true, y_pred, 'macro')`
+
 `> ?`
+
 `f1_score(y_true, y_pred, 'macro')`
+
 `> ?`
