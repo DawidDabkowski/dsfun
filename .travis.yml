@@ -4,9 +4,9 @@ python:
 install:
   - pip install -e .
 #  - pip install -r requirements.txt
-#  - pip install pytest-cov codecov
+  - pip install pytest-cov codecov
 script:
-  - pytest tests
-#  - pytest --cov=dsfun tests
-#after_success:
-#  - codecov
+#  - pytest tests
+  - pytest --cov=dsfun tests
+after_success:
+  - codecov
