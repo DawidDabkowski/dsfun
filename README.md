@@ -3,38 +3,33 @@
 
 # DSfun
 
-This package contains useful loss function class for training algorithms. These are f1-loss related functions. The main features:
-- It is differentiable so it works with tensorflow
-- It is more eficient than standard implementations
-- Great for task that require to optimize F1-score
-- Works with missing data *(TO DO)
-- Can be modified to perform arbitrary differential functions on confusion matrix *(TO DO)*
+**This package is under development and limited for now. Eventually, it will contain a special categorical loss function class for training machine learning algorithms. The goal features include:**
+- Wrapping in a simple interface for many useful loss functions based on confusion matrix
+- Differentiability (compatibility with tensorflow)
+- Scalable to multilabel problems
+- Time efficiency optimizations
+- Working with missing labels
 
 Limitations:
-- As any machine learning framework, this loss function shouldn't be used without proper validation as it is not deeply understood
-- If calculating on batches, it will give a biased estimation of global loss
-- If there are no representatives of a class in a batch, it might not converge properly
+- Loss function that aren't widely studied, should be used with caution and proper validation
+- If calculating on batches, it might give a biased estimation of global loss
+- As the class is broad, some of the functions might not converge at all
 
 # Instalation
 
-`pip install dsfun`
+```
+pip install dsfun
+```
 
-# Usage
+# Usage example
 
-*TO DO*
+```
+import tensorflow as tf
+from dsfun import f1_loss, f1_score
 
-`import tensorflow as tf`
+y_true = tf.constant([[1.0, 0.0], [1.0, 1.0], [0.0, 1.0], [0.0, 1.0]])
+y_pred = tf.constant([[0.5, 0.5], [0.5, 0.5], [1.0, 0.0], [0.0, 1.0]])
 
-`from dsfun import f1_loss, f1_score`
-
-`y_true = tf.constant([[1.0, 0.0], [1.0, 1.0], [0.0, 1.0], [0.0, 1.0]])`
-
-`y_pred = tf.constant([[0.5, 0.5], [0.5, 0.5], [1.0, 0.0], [0.0, 1.0]])`
-
-`f1_loss(y_true, y_pred, 'macro')`
-
-`> ?`
-
-`f1_score(y_true, y_pred, 'macro')`
-
-`> ?`
+print(f1_loss(y_true, y_pred, 'macro'))
+print(f1_score(y_true, y_pred, 'macro'))
+```
